@@ -1,3 +1,5 @@
+USE mydb;
+
 -- TABLE "jobs"
 INSERT INTO jobs(name, salary) VALUES ("spécialiste informatique", 1500);
 INSERT INTO jobs(name, salary) VALUES ("conducteur chariot", 1200);
