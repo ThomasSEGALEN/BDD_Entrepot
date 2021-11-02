@@ -26,33 +26,7 @@ class Employees:
         self.cursor.execute(query, (choice,))
         self.myDB.commit()
 
-    def modify_lastname(self, valeur, id):
-        query = ("UPDATE employees SET lastname = %s WHERE id = %s;")
-        self.cursor.execute(query, (valeur, id,))
+    def modify(self, champ, valeur, id):
+        query = ("UPDATE employees SET " + champ + " = %s WHERE id = %s;")
+        self.cursor.execute(query, (valeur, id))
         self.myDB.commit()
-
-    def modify_firstname(self, valeur, id):
-        query = ("UPDATE employees SET firstname = %s WHERE id = %s;")
-        self.cursor.execute(query, (valeur, id,))
-        self.myDB.commit()
-
-    def modify_age(self, valeur, id):
-        query = ("UPDATE employees SET age = %s WHERE id = %s;")
-        self.cursor.execute(query, (valeur, id,))
-        self.myDB.commit()
-
-    def modify_jobs(self, valeur, id):
-        query = ("UPDATE employees SET jobs_id = %s WHERE id = %s;")
-        self.cursor.execute(query, (valeur, id,))
-        self.myDB.commit()
-
-    def modify_civility(self, valeur, id):
-        query = ("UPDATE employees SET civility_id = %s WHERE id = %s;")
-        self.cursor.execute(query, (valeur, id,))
-        self.myDB.commit()
-
-    def modify_warehouse(self, valeur, id):
-        query = ("UPDATE employees SET warehouse_id = %s WHERE id = %s;")
-        self.cursor.execute(query, (valeur, id,))
-        self.myDB.commit()
-

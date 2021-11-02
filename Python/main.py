@@ -16,7 +16,7 @@ print(test.get_information())
 
 # test.delete()
 
-test.modify_age(40, 1)
+test.modify("age", 41, 1)
 
 print(test.get_information())
 
