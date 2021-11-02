@@ -10,11 +10,11 @@ test = Employees(a)
 
 print(test.get_information())
 
-# test.create("Dubuc", "Mathis", 19, 1, 1, 1)
+test.create("Dubuc", "Mathis", 19, 1, 1, 1)
 
 # print(test.get_information())
 
-test.delete(1)
+test.delete(10)
 
 # test.modify("age", 41, 1)
 
