@@ -21,7 +21,7 @@ USE `mydb` ;
 CREATE TABLE IF NOT EXISTS `mydb`.`jobs` (
   `id` BIGINT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(255) NOT NULL,
-  `salary` DECIMAL NOT NULL,
+  `salary` DECIMAL(7, 2) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -50,7 +50,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`products` (
   `id` BIGINT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(255) NOT NULL,
   `description` TEXT NULL,
-  `price` DECIMAL NOT NULL,
+  `price` DECIMAL(6, 2) NOT NULL,
   `quantity` INT NOT NULL DEFAULT 0,
   `weight` FLOAT NOT NULL,
   `height` FLOAT NOT NULL,
@@ -165,7 +165,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`height` (
   `id` BIGINT NOT NULL AUTO_INCREMENT,
-  `dimension` DECIMAL NOT NULL,
+  `dimension` DECIMAL(4, 2) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
