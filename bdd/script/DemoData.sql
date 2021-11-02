@@ -30,13 +30,10 @@ INSERT INTO civility(name) VALUES ("male");
 INSERT INTO civility(name) VALUES ("female");
 
 -- TABLE "employees"
-INSERT INTO employees(lastname, firstname, age, job_id, civility_id, warehouse_id) VALUES ("Martin", "Léo", 20, 1, 1, 1);
-INSERT INTO employees(lastname, firstname, age, job_id, civility_id, warehouse_id) VALUES ("Dubois", "Lucas", 19, 1, 1, 1);
-INSERT INTO employees(lastname, firstname, age, job_id, civility_id, warehouse_id) VALUES ("LeRoux", "Julie", 30, 2, 2, 1);
-INSERT INTO employees(lastname, firstname, age, job_id, civility_id, warehouse_id) VALUES ("LeBlanc", "Simon", 20, 3, 1, 1);
-
--- TABLE "warehouses_has_products"
--------------------------------------------
+INSERT INTO employees(lastname, firstname, age, jobs_id, civility_id, warehouse_id) VALUES ("Martin", "Léo", 20, 1, 1, 1);
+INSERT INTO employees(lastname, firstname, age, jobs_id, civility_id, warehouse_id) VALUES ("Dubois", "Lucas", 19, 1, 1, 1);
+INSERT INTO employees(lastname, firstname, age, jobs_id, civility_id, warehouse_id) VALUES ("LeRoux", "Julie", 30, 2, 2, 1);
+INSERT INTO employees(lastname, firstname, age, jobs_id, civility_id, warehouse_id) VALUES ("LeBlanc", "Simon", 20, 3, 1, 1);
 
 -- TABLE "height"
 INSERT INTO height(dimention) VALUES (10);
@@ -44,9 +41,6 @@ INSERT INTO height(dimention) VALUES (15);
 INSERT INTO height(dimention) VALUES (20);
 INSERT INTO height(dimention) VALUES (25);
 INSERT INTO height(dimention) VALUES (30);
-
--- TABLE "products_has_slots"
-------------------------------------------
 
 -- TABLE "lane"
 INSERT INTO lane(name, slots_id) VALUES ("lane1", 1);

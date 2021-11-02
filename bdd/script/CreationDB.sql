@@ -99,7 +99,7 @@ ENGINE = InnoDB;
 -- Table `mydb`.`civility`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`civility` (
-  `id` BIGINT NOT NULL,
+  `id` BIGINT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(255) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
@@ -113,7 +113,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`employees` (
   `lastname` VARCHAR(255) NOT NULL,
   `firstname` VARCHAR(255) NOT NULL,
   `age` TINYINT NOT NULL,
-  `post_id` BIGINT NOT NULL,
+  `jobs_id` BIGINT NOT NULL,
   `civility_id` BIGINT NOT NULL,
   `warehouse_id` BIGINT NOT NULL,
   PRIMARY KEY (`id`),
