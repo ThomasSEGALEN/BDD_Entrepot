@@ -165,7 +165,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`height` (
   `id` BIGINT NOT NULL AUTO_INCREMENT,
-  `dimention` DECIMAL NOT NULL,
+  `dimension` DECIMAL NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
