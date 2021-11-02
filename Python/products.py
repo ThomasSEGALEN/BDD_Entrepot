@@ -47,15 +47,18 @@ select(args, table)
 
 
 # UPDATE QUERY
-# def update(column):
-#     query = ('UPDATE products SET ' + column + ' = %s WHERE id = %s')
+# def update(table, column):
+#     query = ('UPDATE ' + table + ' SET ' + column + ' = %s WHERE id = %s')
 #     id = input('id: ')
 #     value = input('value: ')
 #     cursor.execute(query, (value, id))
 #     connection.commit()
 # print('-- Update query --')
+# table = input('table: ')
 # column = input('column: ')
-# update(column)
+# if table == '':
+#     table = 'products'
+# update(table, column)
 
 
 # DELETE QUERY
