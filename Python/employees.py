@@ -18,12 +18,10 @@ class Employees:
         self.cursor.execute(query, (lastname, firstname, age, jobs_id, civility_id, warehouse_id))
         self.myDB.commit()
 
-    def delete(self):
+    def delete(self, id):
         print(self.get_information())
         query = ("DELETE FROM employees WHERE id=%s;")
-        choice = int(input("Quel employé voulez vous supprimer ? : "))
-
-        self.cursor.execute(query, (choice,))
+        self.cursor.execute(query, (id,))
         self.myDB.commit()
 
     def modify(self, champ, valeur, id):
