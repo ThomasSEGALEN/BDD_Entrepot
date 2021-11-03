@@ -6,20 +6,6 @@ from employees import Employees
 
 a = mysql.connector.connect(host='localhost', database='mydb', user='root', password='')
 
-# print(test.get_information())
-
-# # test.create("Dubuc", "Mathis", 19, 1, 1, 1)
-
-# # print(test.get_information())
-
-# test.delete(1)
-
-# # test.modify("age", 41, 1)
-
-# print(test.get_information())
-
-# # print(a)
-
 while True:
     print("1 - employés")
     print("2 - produits")
