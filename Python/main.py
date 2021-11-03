@@ -4,6 +4,17 @@
 import mysql.connector
 from employees import Employees
 
+def format_texte(liste):
+    result = ""
+    for i in liste:
+        result += "\n"
+        for j in i:
+            result += str(j) + " | "
+
+    return result
+
+
+
 a = mysql.connector.connect(host='localhost', database='mydb', user='root', password='')
 
 while True:
@@ -24,7 +35,8 @@ while True:
             choix_emp = input("Que voulez-vous ? : ")
 
             if choix_emp == "1":
-                print(test.get_information())
+                # print(test.get_information())
+                print(format_texte(test.get_information()))
                 break
             elif choix_emp == "2":
                 lastname_emp = input("Lastname : ")
