@@ -2,21 +2,21 @@
 
 ## Plan du module
 - **Mardi** :
-    - Workbench
-    - Script de création de BDD (.sql)
-    - Script jeu de données démo (.sql)
+    [x] Workbench
+    [x] Script de création de BDD (.sql)
+    [x] Script jeu de données démo (.sql)
 
 - **Mercredi** :
     - Python
-        - CRUB (x3)
-        - MySQL.connector
+        [x] CRUB (x3)
+        [x] MySQL.connector
 
 - **Jeudi** :
     - Finalisation dev
-    - présentation orale
+    - Présentation orale
 
 
-## logiciels/langages utilisés
+## Logiciels/langages utilisés
     - Python : création du programme
-    - MySQL : création de la base de donnée
+    - MySQL : création de la base de données
     - Workbench : création des schémas
