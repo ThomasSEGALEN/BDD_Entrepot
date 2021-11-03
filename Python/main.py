@@ -45,8 +45,20 @@ while True:
 
             if choix_emp == "1":
                 clear_text()
-                print(format_text(test.get_information()))
-                break
+                warehouse_tmp = Warehouses(a)
+                choix_ent = input("Voulez-vous choisir un entrepot en particulier ? (O/N): ")
+
+                if choix_ent == "O" or choix_ent == "o":
+                    print(warehouse_tmp.get_information())
+                    choix_id = input("Lequel voulez-vous ? : ")
+                    if choix_id in warehouse_tmp.get_id():
+                        print(format_text(test.get_information_by_id(choix_id)))
+                    else:
+                        print("mauvais id")
+                        break
+                else:
+                    print(format_text(test.get_information()))
+                    break
             elif choix_emp == "2":
                 clear_text()
                 lastname_emp = input("Lastname : ")
@@ -87,8 +99,20 @@ while True:
 
             if choix_prod == "1":
                 clear_text()
-                print(format_text(test.get_information()))
-                break
+                warehouse_tmp = Warehouses(a)
+                choix_ent = input("Voulez-vous choisir un entrepot en particulier ? (O/N): ")
+
+                if choix_ent == "O" or choix_ent == "o":
+                    print(warehouse_tmp.get_information())
+                    choix_id = input("Lequel voulez-vous ? : ")
+                    if choix_id in warehouse_tmp.get_id():
+                        print(format_text(test.get_information_by_id(choix_id)))
+                    else:
+                        print("mauvais id")
+                        break
+                else:
+                    print(format_text(test.get_information()))
+                    break
             elif choix_prod == "2":
                 clear_text()
                 name_prod = input("Product name : ")

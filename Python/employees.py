@@ -13,6 +13,16 @@ class Employees:
 
         return result
 
+    def get_information_by_id(self, id):
+        result = []
+        query = ("SELECT employees.id, lastname, firstname, age, jobs.name AS jobs, civility.name AS civility, warehouses.name AS warehouses FROM employees INNER JOIN jobs ON jobs.id = employees.jobs_id INNER JOIN civility ON civility.id = employees.civility_id INNER JOIN warehouses ON warehouses.id = employees.warehouse_id WHERE warehouses.id = %s;")
+        self.cursor.execute(query, (id,))
+
+        for (id, lastname, firstname, age, jobs_id, civility_id, warehouse_id) in self.cursor:
+            result.append([id, lastname, firstname, age, jobs_id, civility_id, warehouse_id])
+
+        return result
+
     def create(self, lastname, firstname, age, jobs_id, civility_id, warehouse_id):
         query = ("INSERT INTO employees(lastname, firstname, age, jobs_id, civility_id, warehouse_id) VALUES (%s, %s, %s, %s, %s, %s);")
         self.cursor.execute(query, (lastname, firstname, age, jobs_id, civility_id, warehouse_id))
