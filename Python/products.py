@@ -5,7 +5,7 @@ class Products:
 
     def get_information(self):
         result = []
-        query = ("SELECT * FROM products;")
+        query = ("SELECT products.id, products.name AS products, description, price, quantity, weight, height, category.name AS category FROM products INNER JOIN category ON category.id = products.category_id;")
         self.cursor.execute(query)
 
         for (id, name, description, price, quantity, weight, height, category_id) in self.cursor:
