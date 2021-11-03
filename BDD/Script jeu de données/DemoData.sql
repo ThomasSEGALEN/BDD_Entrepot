@@ -19,13 +19,13 @@ INSERT INTO products(name, description, price, quantity, weight, height, categor
 INSERT INTO products(name, description, price, quantity, weight, height, category_id) VALUES ("chaussure", "des chaussures pour bien marcher sur le sol", 100, 15, 0.5, 25, 2);
 
 -- TABLE "slots"
-INSERT INTO slots(name, disponible) VALUES ("slot1", 1);
-INSERT INTO slots(name, disponible) VALUES ("slot2", 1);
-INSERT INTO slots(name, disponible) VALUES ("slot3", 1);
-INSERT INTO slots(name, disponible) VALUES ("slot4", 1);
+INSERT INTO slots(name, disponible, warehouse_id) VALUES ("slot1", 1, 1);
+INSERT INTO slots(name, disponible, warehouse_id) VALUES ("slot2", 1, 1);
+INSERT INTO slots(name, disponible, warehouse_id) VALUES ("slot3", 1, 1);
+INSERT INTO slots(name, disponible, warehouse_id) VALUES ("slot4", 1, 1);
 
 -- TABLE "warehouses"
-INSERT INTO warehouses(name, city, quantity_product_max, slots_id) VALUES ("Le super Warehouse", "Angers", 50, 1);
+INSERT INTO warehouses(name, city, quantity_product_max) VALUES ("Le super Warehouse", "Angers", 50);
 
 -- TABLE "civility"
 INSERT INTO civility(name) VALUES ("male");
