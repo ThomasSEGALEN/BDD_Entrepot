@@ -33,7 +33,7 @@ while True:
     choix = input("Que voulez vous ? : ")
 
     if choix == "1":
-        test = Warehouses(a)
+        test = Employees(a)
         while True:
             print("1 - Voir les employés")
             print("2 - Ajouter un employé")
@@ -76,40 +76,39 @@ while True:
     elif choix == "2":
         pass
     elif choix == "3":
-        test = Employees(a)
+        test = Warehouses(a)
         while True:
             print("1 - Voir les entrepôts")
             print("2 - Ajouter un entrepôts")
             print("3 - Supprimer un entrepôts")
             print("4 - Modifier les données d'un entrepôts")
             print("99 - retour")
-            choix_emp = input("Que voulez-vous ? : ")
+            choix_ware = input("Que voulez-vous ? : ")
 
-            if choix_emp == "1":
+            if choix_ware == "1":
                 print(format_texte(test.get_information()))
                 break
-            elif choix_emp == "2":
-                lastname_emp = input("Lastname : ")
-                firstname_emp = input("Firstname : ")
-                age_emp = input("Age : ")
-                jobsid_emp = input("jobs_id : ")
-                civilityid_emp = input("civlity_id : ")
-                warehouseid_emp = input("warehouse_id : ")
-                test.create(lastname_emp, firstname_emp, age_emp, jobsid_emp, civilityid_emp, warehouseid_emp)
-                print("Vous avez créé un employé")
+            elif choix_ware == "2":
+                """name, city, quantity_product_max, slot_id"""
+                name_ware = input("Lastname : ")
+                city_ware = input("Age : ")
+                quantity_product_max_ware = input("jobs_id : ")
+                slot_id_ware = input("civlity_id : ")
+                test.create(name_ware, city_ware, quantity_product_max_ware, slot_id_ware)
+                print("Vous avez créé un entrepôt")
                 break
-            elif choix_emp == "3":
-                id_emp = input("id de l'employé")
-                test.delete(id_emp)
-                print("Vous avez supprimé un employé")
+            elif choix_ware == "3":
+                id_ware = input("id de l'entrepôt")
+                test.delete(id_ware)
+                print("Vous avez supprimé un entrepôt")
                 break
-            elif choix_emp == "4":
-                champ_emp = input("Champ à modifier : ")
-                valeur_emp = input("Valeur du champ : ")
-                id_emp = input("Id de l'employé : ")
-                test.modify(champ_emp, valeur_emp, id_emp)
+            elif choix_ware == "4":
+                id_ware = input("Id de l'entrepôt : ")
+                champ_ware = input("Champ à modifier : ")
+                valeur_ware = input("Valeur du champ : ")
+                test.modify(id_ware, champ_ware, valeur_ware)
                 break
-            elif choix_emp == "99":
+            elif choix_ware == "99":
                 break
     elif choix == "99":
         break
