@@ -1,19 +1,19 @@
 # BDD_Entrepot
 
 ## Plan du module
-- **Mardi** :
+- **Mardi** :  
     [x] Workbench
     [x] Script de création de BDD (.sql)
     [x] Script jeu de données démo (.sql)
 
-- **Mercredi** :
-    - Python
-        [x] CRUB (x3)
-        [x] MySQL.connector
+- **Mercredi** :  
+    - Python  
+    [x] CRUB (x3)
+    [x] MySQL.connector
 
-- **Jeudi** :
-    - Finalisation dev
-    - Présentation orale
+- **Jeudi** :  
+[] Finalisation dev
+[] Présentation orale
 
 
 ## Logiciels/langages utilisés
