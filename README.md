@@ -12,8 +12,8 @@
         - [x] MySQL.connector
 
 - **Jeudi** :  
-    - [] Finalisation dev
-    - [] Présentation orale
+    - [ ] Finalisation dev
+    - [ ] Présentation orale
 
 
 ## Logiciels/langages utilisés
