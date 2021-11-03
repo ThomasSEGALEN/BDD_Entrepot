@@ -21,7 +21,7 @@ USE `mydb` ;
 CREATE TABLE IF NOT EXISTS `mydb`.`jobs` (
   `id` BIGINT(20) NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(255) NOT NULL,
-  `salary` DECIMAL(10,0) NOT NULL,
+  `salary` DECIMAL(10,2) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
 AUTO_INCREMENT = 6
@@ -113,7 +113,7 @@ DEFAULT CHARACTER SET = utf8;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`height` (
   `id` BIGINT(20) NOT NULL AUTO_INCREMENT,
-  `dimension` DECIMAL(10,0) NOT NULL,
+  `dimension` DECIMAL(10,2) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
 AUTO_INCREMENT = 6
@@ -192,7 +192,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`products` (
   `id` BIGINT(20) NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(255) NOT NULL,
   `description` TEXT NULL DEFAULT NULL,
-  `price` DECIMAL(10,0) NOT NULL,
+  `price` DECIMAL(10,2) NOT NULL,
   `quantity` INT(11) NOT NULL DEFAULT '0',
   `weight` FLOAT NOT NULL,
   `height` FLOAT NOT NULL,
