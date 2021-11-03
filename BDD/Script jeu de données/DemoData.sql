@@ -31,6 +31,7 @@ INSERT INTO slots(name, disponible, warehouses_id) VALUES ("slot4", 1, 1);
 -- TABLE "warehouses"
 ALTER TABLE warehouses AUTO_INCREMENT = 1;
 INSERT INTO warehouses(name, city, quantity_product_max) VALUES ("Le super Warehouse", "Angers", 50);
+INSERT INTO warehouses(name, city, quantity_product_max) VALUES ("Le warehouse pas mal", "Paris", 30);
 
 -- TABLE "civility"
 ALTER TABLE civility AUTO_INCREMENT = 1;
@@ -45,6 +46,12 @@ INSERT INTO employees(lastname, firstname, age, jobs_id, civility_id, warehouse_
 INSERT INTO employees(lastname, firstname, age, jobs_id, civility_id, warehouse_id) VALUES ("LeBlanc", "Simon", 20, 3, 1, 1);
 
 -- TABLE "warehouses_has_products"
+INSERT INTO warehouses_has_products(warehouse_id, products_id) VALUES (1, 1);
+INSERT INTO warehouses_has_products(warehouse_id, products_id) VALUES (1, 2);
+INSERT INTO warehouses_has_products(warehouse_id, products_id) VALUES (1, 3);
+INSERT INTO warehouses_has_products(warehouse_id, products_id) VALUES (1, 4);
+INSERT INTO warehouses_has_products(warehouse_id, products_id) VALUES (2, 2);
+INSERT INTO warehouses_has_products(warehouse_id, products_id) VALUES (2, 3);
 
 -- TABLE "height"
 ALTER TABLE height AUTO_INCREMENT = 1;
@@ -69,4 +76,3 @@ INSERT INTO level(number, lane_id, height_id) VALUES (3, 1, 4);
 INSERT INTO level(number, lane_id, height_id) VALUES (1, 2, 5);
 INSERT INTO level(number, lane_id, height_id) VALUES (2, 2, 3);
 INSERT INTO level(number, lane_id, height_id) VALUES (3, 2, 3);
-
