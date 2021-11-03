@@ -24,7 +24,7 @@ def clear_text():
 
 
 
-a = mysql.connector.connect(host='localhost', database='mydb', user='root', password='')
+cnx = mysql.connector.connect(host='localhost', database='mydb', user='root', password='')
 
 while True:
     clear_text()
@@ -35,7 +35,7 @@ while True:
     choix = input("Que voulez vous ? : ")
 
     if choix == "1":
-        test = Employees(a)
+        test = Employees(cnx)
         while True:
             clear_text()
             print("1 - Voir les employés")
@@ -47,7 +47,7 @@ while True:
 
             if choix_emp == "1":
                 clear_text()
-                warehouse_tmp = Warehouses(a)
+                warehouse_tmp = Warehouses(cnx)
                 choix_ent = input("Voulez-vous choisir un entrepot en particulier ? (O/N): ")
 
                 if choix_ent == "O" or choix_ent == "o":
@@ -93,7 +93,7 @@ while True:
                 clear_text()
                 break
     elif choix == "2":
-        test = Products(a)
+        test = Products(cnx)
         while True:
             clear_text()
             print("1 - Voir les produits")
@@ -105,7 +105,7 @@ while True:
 
             if choix_prod == "1":
                 clear_text()
-                warehouse_tmp = Warehouses(a)
+                warehouse_tmp = Warehouses(cnx)
                 choix_ent = input("Voulez-vous choisir un entrepot en particulier ? (O/N): ")
 
                 if choix_ent == "O" or choix_ent == "o":
@@ -152,7 +152,7 @@ while True:
                 clear_text()
                 break
     elif choix == "3":
-        test = Warehouses(a)
+        test = Warehouses(cnx)
         while True:
             clear_text()
             print("1 - Voir les entrepôts")
