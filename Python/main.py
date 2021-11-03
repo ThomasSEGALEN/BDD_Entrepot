@@ -3,6 +3,7 @@
 
 import mysql.connector
 import os
+import time
 from employees import Employees
 from warehouse import Warehouses
 from products import Products
@@ -27,6 +28,7 @@ def clear_text():
 a = mysql.connector.connect(host='localhost', database='mydb', user='root', password='')
 
 while True:
+    clear_text()
     print("1 - employés")
     print("2 - produits")
     print("3 - entrepot")
@@ -36,6 +38,7 @@ while True:
     if choix == "1":
         test = Employees(a)
         while True:
+            clear_text()
             print("1 - Voir les employés")
             print("2 - Ajouter un employé")
             print("3 - Supprimer un employé")
@@ -53,11 +56,14 @@ while True:
                     choix_id = input("Lequel voulez-vous ? : ")
                     if choix_id in warehouse_tmp.get_id():
                         print(format_text(test.get_information_by_id(choix_id)))
+                        quit = input("Entrer pour quitter")
                     else:
                         print("mauvais id")
+                        quit = input("Entrer pour quitter")
                         break
                 else:
                     print(format_text(test.get_information()))
+                    quit = input("Entrer pour quitter")
                     break
             elif choix_emp == "2":
                 clear_text()
@@ -90,6 +96,7 @@ while True:
     elif choix == "2":
         test = Products(a)
         while True:
+            clear_text()
             print("1 - Voir les produits")
             print("2 - Ajouter un produit")
             print("3 - Supprimer un produit")
@@ -107,11 +114,14 @@ while True:
                     choix_id = input("Lequel voulez-vous ? : ")
                     if choix_id in warehouse_tmp.get_id():
                         print(format_text(test.get_information_by_id(choix_id)))
+                        quit = input("Entrer pour quitter")
                     else:
                         print("mauvais id")
+                        quit = input("Entrer pour quitter")
                         break
                 else:
                     print(format_text(test.get_information()))
+                    quit = input("Entrer pour quitter")
                     break
             elif choix_prod == "2":
                 clear_text()
@@ -145,6 +155,7 @@ while True:
     elif choix == "3":
         test = Warehouses(a)
         while True:
+            clear_text()
             print("1 - Voir les entrepôts")
             print("2 - Ajouter un entrepôts")
             print("3 - Supprimer un entrepôts")
