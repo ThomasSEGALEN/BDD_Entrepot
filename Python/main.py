@@ -5,6 +5,7 @@ import mysql.connector
 from Python.warehouse import Warehouses
 import os
 from employees import Employees
+from products import Products
 
 def format_texte(liste):
     result = ""
@@ -75,6 +76,42 @@ while True:
                 break
     elif choix == "2":
         pass
+        while True:
+            print("1 - Voir les produits")
+            print("Ajouter un produit")
+            print("Supprimer un produit")
+            print("Modifier les données d'un produit")
+            print("99 - retour")
+            choix_prod = input("Que voulez-vous ? :")
+
+            if choix_prod == "1":
+                print(format_text(test.get_information()))
+                break
+            elif choix_prod == "2":
+                """name, description, price, quantity, weight, height, category_id"""
+                name_prod = input("Product name : ")
+                description_prod = input("Description : ")
+                price_prod = input("Price : ")
+                quantity_prod = input("Quantity : ")
+                weight_prod = input("Weight : ")
+                height_prod = input("Height : ")
+                category_id_prod = input("category_id : ")
+                test.create(name_prod, description_prod, price_prod, quantity_prod, weight_prod, height_prod, category_id_prod)
+                print("Vous avez créer un produit")
+                break
+            elif choix_prod == "3":
+                id_prod = input("id du produit")
+                test.delete(id_prod)
+                print("Vous avez supprimé un produit")
+                break
+            elif choix_prod == "4":
+                id_prod = input("Id du produit : ")
+                champ_prod = input("Champ à modifier : ")
+                valeur_prod = input("Valeur du champ : ")
+                test.modify(id_prod, champ_prod, valeur_prod)
+                break
+            elif choix_ware == "99":
+                break
     elif choix == "3":
         test = Warehouses(a)
         while True:
