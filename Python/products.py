@@ -43,7 +43,11 @@ def insert():
     cursor.execute(query, data)
     connection.commit()
 print('-- Insert query --')
+<<<<<<< HEAD
 # insert()
+=======
+insert()
+>>>>>>> f83884d8f4ddbddd73efed91bc949af8b765016a
 
 
 # UPDATE QUERY
@@ -58,7 +62,11 @@ table = input('table: ')
 column = input('column: ')
 if table == '':
     table = 'products'
+<<<<<<< HEAD
 # update(table, column)
+=======
+update(table, column)
+>>>>>>> f83884d8f4ddbddd73efed91bc949af8b765016a
 
 
 # DELETE QUERY
@@ -73,8 +81,12 @@ table = input('table: ')
 column = input('column: ')
 if table == '':
     table = 'products'
+<<<<<<< HEAD
 # delete(table, column)
+=======
+delete(table, column)
+>>>>>>> f83884d8f4ddbddd73efed91bc949af8b765016a
 
 
-# cursor.close()
-# connection.close()
+cursor.close()
+connection.close()

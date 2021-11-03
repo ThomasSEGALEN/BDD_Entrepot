@@ -5,7 +5,7 @@ class Employees:
 
     def get_information(self):
         result = []
-        query = "SELECT * FROM employees;"
+        query = ("SELECT employees.id, lastname, firstname, age, jobs.name AS jobs, civility.name AS civility, warehouses.name AS warehouses FROM employees INNER JOIN jobs ON jobs.id = employees.jobs_id INNER JOIN civility ON civility.id = employees.civility_id INNER JOIN warehouses ON warehouses.id = employees.warehouse_id;")
         self.cursor.execute(query)
 
         for (id, lastname, firstname, age, jobs_id, civility_id, warehouse_id) in self.cursor:
