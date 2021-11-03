@@ -3,7 +3,6 @@
 
 import mysql.connector
 import os
-import time
 from employees import Employees
 from warehouse import Warehouses
 from products import Products
