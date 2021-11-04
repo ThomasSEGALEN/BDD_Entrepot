@@ -25,9 +25,9 @@ class Warehouses:
 
 
     
-    def create(self, name, city, quantity_product_max, slot_id):
-        query = ("INSERT INTO warehouses(lastname, firstname, age, jobs_id, civility_id, warehouse_id) VALUES (%s, %s, %s, %s, %s, %s);")
-        self.cursor.execute(query, (name, city, quantity_product_max, slot_id))
+    def create(self, name, city, quantity_product_max):
+        query = ("INSERT INTO warehouses(name, city, quantity_product_max) VALUES (%s, %s, %s, %s);")
+        self.cursor.execute(query, (name, city, quantity_product_max))
         self.myDB.commit()
 
     def delete(self, id):
