@@ -12,7 +12,7 @@
         - [x] MySQL.connector
 
 - **Jeudi** :  
-    - [ ] Finalisation dev
+    - [x] Finalisation dev
     - [ ] Présentation orale
 
 
