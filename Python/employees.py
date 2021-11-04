@@ -30,7 +30,6 @@ class Employees:
         self.myDB.commit()
 
     def delete(self, id):
-        print(self.get_information())
         query = ("DELETE FROM employees WHERE id=%s;")
         self.cursor.execute(query, (id,))
         self.myDB.commit()
