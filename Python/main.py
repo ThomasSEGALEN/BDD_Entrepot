@@ -27,7 +27,6 @@ def clear_text():
 cnx = mysql.connector.connect(host='localhost', database='mydb', user='root', password='')
 
 while True:
-    clear_text()
     print("1 - employés")
     print("2 - produits")
     print("3 - entrepot")
@@ -168,11 +167,10 @@ while True:
                 break
             elif choix_ware == "2":
                 clear_text()
-                name_ware = input("Lastname : ")
-                city_ware = input("Age : ")
-                quantity_product_max_ware = input("jobs_id : ")
-                slot_id_ware = input("civlity_id : ")
-                test.create(name_ware, city_ware, quantity_product_max_ware, slot_id_ware)
+                name_ware = input("Nom : ")
+                city_ware = input("Ville : ")
+                quantity_product_max_ware = input("Nombre de produit max : ")
+                test.create(name_ware, city_ware, quantity_product_max_ware)
                 print("Vous avez créé un entrepôt")
                 break
             elif choix_ware == "3":
