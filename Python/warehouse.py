@@ -23,6 +23,15 @@ class Warehouses:
 
         return "".join(map(str, result))
 
+    def get_columns_name(self):
+        result = []
+        query = ("SHOW COLUMNS FROM warehouses;")
+        self.cursor.execute(query)
+
+        for (fields) in self.cursor:
+            result.append([fields[0]])
+
+        return result
 
     
     def create(self, name, city, quantity_product_max):

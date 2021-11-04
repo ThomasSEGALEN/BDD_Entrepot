@@ -80,6 +80,7 @@ while True:
             # DELETE
             elif choix_emp == "3":
                 clear_text()
+                print(format_text(Employees(cnx).get_information()))
                 id_emp = input("Id de l'employé : ")
                 employees_obj.delete(id_emp)
                 print("Vous avez supprimé un employé")
@@ -87,6 +88,8 @@ while True:
             # UPDATE
             elif choix_emp == "4":
                 clear_text()
+                print(format_text(employees_obj.get_columns_name()))
+                print(format_text(employees_obj.get_information()))
                 champ_emp = input("Champ à modifier : ")
                 valeur_emp = input("Valeur du champ : ")
                 id_emp = input("Id de l'employé : ")
@@ -144,6 +147,7 @@ while True:
             # DELETE
             elif choix_prod == "3":
                 clear_text()
+                print(format_text(Products(cnx).get_information()))
                 id_prod = input("Id du produit : ")
                 product_obj.delete(id_prod)
                 print("Vous avez supprimé un produit")
@@ -151,6 +155,8 @@ while True:
             # UPDATE
             elif choix_prod == "4":
                 clear_text()
+                print(format_text(product_obj.get_columns_name()))
+                print(format_text(product_obj.get_information()))
                 champ_prod = input("Champ à modifier : ")
                 valeur_prod = input("Valeur du champ : ")
                 id_prod = input("Id du produit : ")
@@ -189,6 +195,7 @@ while True:
             # DELETE
             elif choix_ware == "3":
                 clear_text()
+                print(format_text(Warehouses(cnx).get_information()))
                 id_ware = input("Id de l'entrepôt : ")
                 warehouse_obj.delete(id_ware)
                 print("Vous avez supprimé un entrepôt")
@@ -196,6 +203,8 @@ while True:
             # UPDATE
             elif choix_ware == "4":
                 clear_text()
+                print(format_text(employees_obj.get_columns_name()))
+                print(format_text(warehouse_obj.get_information()))
                 champ_ware = input("Champ à modifier : ")
                 valeur_ware = input("Valeur du champ : ")
                 id_ware = input("Id de l'entrepôt : ")

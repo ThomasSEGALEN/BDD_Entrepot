@@ -24,6 +24,16 @@ class Employees:
 
         return result
 
+    def get_columns_name(self):
+        result = []
+        query = ("SHOW COLUMNS FROM employees;")
+        self.cursor.execute(query)
+
+        for (fields) in self.cursor:
+            result.append([fields[0]])
+
+        return result
+
     def create(self, lastname, firstname, age, jobs_id, civility_id, warehouse_id):
         query = ("INSERT INTO employees(lastname, firstname, age, jobs_id, civility_id, warehouse_id) VALUES (%s, %s, %s, %s, %s, %s);")
         self.cursor.execute(query, (lastname, firstname, age, jobs_id, civility_id, warehouse_id))
@@ -38,3 +48,4 @@ class Employees:
         query = ("UPDATE employees SET " + champ + " = %s WHERE id = %s;")
         self.cursor.execute(query, (valeur, id))
         self.myDB.commit()
+

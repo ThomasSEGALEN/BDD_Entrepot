@@ -24,6 +24,16 @@ class Products:
 
         return result
 
+    def get_columns_name(self):
+        result = []
+        query = ("SHOW COLUMNS FROM products;")
+        self.cursor.execute(query)
+
+        for (fields) in self.cursor:
+            result.append([fields[0]])
+
+        return result
+
     def create(self, name, description, price, quantity, weight, height, category_id):
         query = ("INSERT INTO products(name, description, price, quantity, weight, height, category_id) VALUES (%s, %s, %s, %s, %s, %s, %s);")
         self.cursor.execute(query, (name, description, price, quantity, weight, height, category_id))
