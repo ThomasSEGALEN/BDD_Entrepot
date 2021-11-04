@@ -13,6 +13,7 @@ class Employees:
 
         return result
 
+    # Récupérer les information en filtrant par l'id d'un warehouse
     def get_information_by_id(self, id):
         result = []
         query = ("SELECT employees.id, lastname, firstname, age, jobs.name AS jobs, civility.name AS civility, warehouses.name AS warehouses FROM employees INNER JOIN jobs ON jobs.id = employees.jobs_id INNER JOIN civility ON civility.id = employees.civility_id INNER JOIN warehouses ON warehouses.id = employees.warehouse_id WHERE warehouses.id = %s;")

@@ -13,6 +13,7 @@ class Products:
 
         return result
 
+    # Récupérer les information en filtrant par l'id d'un warehouse
     def get_information_by_id(self, id):
         result = []
         query = ("SELECT products.id, products.name AS products, description, price, quantity, weight, height, category.name AS category FROM products INNER JOIN category ON category.id = products.category_id INNER JOIN warehouses_has_products ON warehouses_has_products.products_id = products.id INNER JOIN warehouses ON warehouses.id = warehouses_has_products.warehouse_id WHERE warehouses.id = %s;")
