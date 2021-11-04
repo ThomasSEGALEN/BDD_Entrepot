@@ -52,7 +52,7 @@ while True:
                 choix_ent = input("Voulez-vous choisir un entrepot en particulier ? (O/N): ")
 
                 if choix_ent == "O" or choix_ent == "o":
-                    print(warehouse_tmp.get_information())
+                    print(format_text(warehouse_tmp.get_information()))
                     choix_id = input("Lequel voulez-vous ? : ")
                     if choix_id in warehouse_tmp.get_id():
                         print(format_text(employees_obj.get_information_by_id(choix_id)))
@@ -115,7 +115,7 @@ while True:
                 choix_ent = input("Voulez-vous choisir un entrepot en particulier ? (O/N): ")
 
                 if choix_ent == "O" or choix_ent == "o":
-                    print(warehouse_tmp.get_information())
+                    print(format_text(warehouse_tmp.get_information()))
                     choix_id = input("Lequel voulez-vous ? : ")
                     if choix_id in warehouse_tmp.get_id():
                         print(format_text(product_obj.get_information_by_id(choix_id)))
